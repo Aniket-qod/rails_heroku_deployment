@@ -1,0 +1,430 @@
+Started GET "/" for 127.0.0.1 at 2022-01-15 09:15:36 +0530
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/admin1/.rvm/gems/ruby-2.7.3/gems/railties-7.0.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/admin1/.rvm/gems/ruby-2.7.3/gems/railties-7.0.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.7ms | Allocations: 653)
+Completed 200 OK in 16ms (Views: 7.0ms | ActiveRecord: 0.0ms | Allocations: 6386)
+
+
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (8.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeviseCreateAdmins (20220115035003)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "admins" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime(6), "remember_created_at" datetime(6), "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_admins_on_email" ON "admins" ("email")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_admins_on_reset_password_token" ON "admins" ("reset_password_token")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220115035003"]]
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to DeviseCreateVendors (20220115035037)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "vendors" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime(6), "remember_created_at" datetime(6), "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_vendors_on_email" ON "vendors" ("email")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_vendors_on_reset_password_token" ON "vendors" ("reset_password_token")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220115035037"]]
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to DeviseCreateCustomers (20220115035133)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "customers" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime(6), "remember_created_at" datetime(6), "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_customers_on_email" ON "customers" ("email")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_customers_on_reset_password_token" ON "customers" ("reset_password_token")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220115035133"]]
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-01-15 03:51:41.020629"], ["updated_at", "2022-01-15 03:51:41.020629"]]
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2022-01-15 09:21:52 +0530
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant HomeController):
+  
+Started GET "/admins/sign_in" for 127.0.0.1 at 2022-01-15 09:21:58 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.2ms | Allocations: 810)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 19.8ms | Allocations: 8245)
+  Rendered layout layouts/application.html.erb (Duration: 261.4ms | Allocations: 104366)
+Completed 200 OK in 281ms (Views: 262.8ms | ActiveRecord: 0.8ms | Allocations: 114353)
+
+
+Started GET "/admins/password/new" for 127.0.0.1 at 2022-01-15 09:22:04 +0530
+Processing by Devise::PasswordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.6ms | Allocations: 240)
+  Rendered devise/shared/_links.html.erb (Duration: 1.0ms | Allocations: 247)
+  Rendered devise/passwords/new.html.erb within layouts/application (Duration: 9.2ms | Allocations: 1443)
+  Rendered layout layouts/application.html.erb (Duration: 13.9ms | Allocations: 3617)
+Completed 200 OK in 21ms (Views: 17.1ms | ActiveRecord: 0.0ms | Allocations: 4783)
+
+
+Started GET "/admins/sign_up" for 127.0.0.1 at 2022-01-15 09:22:07 +0530
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 82)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 7.0ms | Allocations: 1525)
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | Allocations: 3699)
+Completed 200 OK in 15ms (Views: 13.5ms | ActiveRecord: 0.0ms | Allocations: 4907)
+
+
+Started GET "/vendors/sign_in" for 127.0.0.1 at 2022-01-15 09:22:17 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.0ms | Allocations: 361)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1396)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 3560)
+Completed 200 OK in 14ms (Views: 8.6ms | ActiveRecord: 0.6ms | Allocations: 6058)
+
+
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCategories (20220115035425)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "categories" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "status" varchar, "image" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220115035425"]]
+  [1m[36mTRANSACTION (7.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateSubcategories (20220115035436)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "subcategories" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "status" varchar, "image" varchar, "category_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_3937626525"
+FOREIGN KEY ("category_id")
+  REFERENCES "categories" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_subcategories_on_category_id" ON "subcategories" ("category_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220115035436"]]
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateProducts (20220115035448)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "products" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" varchar, "price" varchar, "quantity" varchar, "image" varchar, "status" varchar, "category_id" integer NOT NULL, "subcategory_id" integer NOT NULL, "vendor_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_fb915499a4"
+FOREIGN KEY ("category_id")
+  REFERENCES "categories" ("id")
+, CONSTRAINT "fk_rails_150008c07d"
+FOREIGN KEY ("subcategory_id")
+  REFERENCES "subcategories" ("id")
+, CONSTRAINT "fk_rails_52615103db"
+FOREIGN KEY ("vendor_id")
+  REFERENCES "vendors" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_products_on_category_id" ON "products" ("category_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_products_on_subcategory_id" ON "products" ("subcategory_id")[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE INDEX "index_products_on_vendor_id" ON "products" ("vendor_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220115035448"]]
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateProductImages (20220115035512)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "product_images" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "image" varchar, "status" varchar, "product_id" integer NOT NULL, "vendor_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_1c991d3be6"
+FOREIGN KEY ("product_id")
+  REFERENCES "products" ("id")
+, CONSTRAINT "fk_rails_7d6525c1f1"
+FOREIGN KEY ("vendor_id")
+  REFERENCES "vendors" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_product_images_on_product_id" ON "product_images" ("product_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_product_images_on_vendor_id" ON "product_images" ("vendor_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220115035512"]]
+  [1m[36mTRANSACTION (4.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateSliders (20220115035520)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "sliders" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "image" varchar, "status" varchar, "category_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_3e77a3346d"
+FOREIGN KEY ("category_id")
+  REFERENCES "categories" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_sliders_on_category_id" ON "sliders" ("category_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220115035520"]]
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateVideoThemes (20220115035529)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "video_themes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "video" varchar, "status" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220115035529"]]
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateCartThemes (20220115035535)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "cart_themes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "theme" varchar, "status" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220115035535"]]
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/categories" for 127.0.0.1 at 2022-01-15 09:26:42 +0530
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:6
+  Rendered categories/index.html.erb within layouts/application (Duration: 5.7ms | Allocations: 1303)
+  Rendered layout layouts/application.html.erb (Duration: 62.2ms | Allocations: 36589)
+Completed 200 OK in 69ms (Views: 63.9ms | ActiveRecord: 0.2ms | Allocations: 41744)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2022-01-15 09:26:45 +0530
+Processing by CategoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (Duration: 9.6ms | Allocations: 4011)
+  Rendered categories/new.html.erb within layouts/application (Duration: 13.0ms | Allocations: 4312)
+  Rendered layout layouts/application.html.erb (Duration: 16.2ms | Allocations: 6486)
+Completed 200 OK in 24ms (Views: 16.9ms | ActiveRecord: 0.7ms | Allocations: 11590)
+
+
+Started POST "/categories" for 127.0.0.1 at 2022-01-15 09:26:50 +0530
+Processing by CategoriesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "category"=>{"name"=>"csndasdkjan", "status"=>"jdnfssd", "image"=>"ndkjfnskj"}, "commit"=>"Create Category"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/categories_controller.rb:27:in `block in create'
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "status", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "csndasdkjan"], ["status", "jdnfssd"], ["image", "ndkjfnskj"], ["created_at", "2022-01-15 03:56:50.754549"], ["updated_at", "2022-01-15 03:56:50.754549"]]
+  ↳ app/controllers/categories_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/categories_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/categories/1
+Completed 302 Found in 7ms (ActiveRecord: 2.5ms | Allocations: 2946)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2022-01-15 09:26:50 +0530
+Processing by CategoriesController#show as TURBO_STREAM
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:63:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/_category.html.erb (Duration: 0.5ms | Allocations: 228)
+  Rendered categories/show.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1314)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 3471)
+Completed 200 OK in 9ms (Views: 5.8ms | ActiveRecord: 0.5ms | Allocations: 5998)
+
+
+Started GET "/categories" for 127.0.0.1 at 2022-01-15 09:27:01 +0530
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:6
+  Rendered categories/_category.html.erb (Duration: 0.1ms | Allocations: 25)
+  Rendered categories/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 936)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 3091)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.1ms | Allocations: 3370)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2022-01-15 09:27:07 +0530
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:63:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/_category.html.erb (Duration: 0.2ms | Allocations: 25)
+  Rendered categories/show.html.erb within layouts/application (Duration: 1.8ms | Allocations: 528)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 2674)
+Completed 200 OK in 8ms (Views: 5.6ms | ActiveRecord: 0.2ms | Allocations: 3399)
+
+
+Started DELETE "/categories/1" for 127.0.0.1 at 2022-01-15 09:27:11 +0530
+Processing by CategoriesController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:63:in `set_category'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/categories_controller.rb:52:in `destroy'
+  [1m[36mCategory Destroy (0.4ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/categories_controller.rb:52:in `destroy'
+  [1m[36mTRANSACTION (6.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/categories_controller.rb:52:in `destroy'
+Redirected to http://localhost:3000/categories
+Completed 302 Found in 14ms (ActiveRecord: 7.6ms | Allocations: 2312)
+
+
+Started GET "/categories" for 127.0.0.1 at 2022-01-15 09:27:11 +0530
+Processing by CategoriesController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:6
+  Rendered categories/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 797)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 2951)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.1ms | Allocations: 3223)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2022-01-15 09:27:14 +0530
+Processing by CategoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (Duration: 4.0ms | Allocations: 1067)
+  Rendered categories/new.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1155)
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 3317)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.0ms | Allocations: 3588)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2022-01-15 09:30:15 +0530
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CategoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (Duration: 14.7ms | Allocations: 4300)
+  Rendered categories/new.html.erb within layouts/application (Duration: 16.2ms | Allocations: 4794)
+  Rendered layout layouts/application.html.erb (Duration: 73.3ms | Allocations: 40163)
+Completed 200 OK in 87ms (Views: 76.0ms | ActiveRecord: 0.5ms | Allocations: 50022)
+
+
+Started POST "/categories" for 127.0.0.1 at 2022-01-15 09:30:24 +0530
+Processing by CategoriesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "category"=>{"name"=>"smdkasdk", "status"=>"sdfnskn", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007f90fc120158 @tempfile=#<Tempfile:/tmp/RackMultipart20220115-15615-1vbzq8y.png>, @original_filename="Screenshot from 2022-01-10 16-59-55.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"category[image]\"; filename=\"Screenshot from 2022-01-10 16-59-55.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Create Category"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/categories_controller.rb:27:in `block in create'
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "status", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "smdkasdk"], ["status", "sdfnskn"], ["image", "#<ActionDispatch::Http::UploadedFile:0x00007f90fc120158>"], ["created_at", "2022-01-15 04:00:24.297550"], ["updated_at", "2022-01-15 04:00:24.297550"]]
+  ↳ app/controllers/categories_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/categories_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/categories/2
+Completed 302 Found in 7ms (ActiveRecord: 2.7ms | Allocations: 2949)
+
+
+Started GET "/categories/2" for 127.0.0.1 at 2022-01-15 09:30:24 +0530
+Processing by CategoriesController#show as TURBO_STREAM
+  Parameters: {"id"=>"2"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:63:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/_category.html.erb (Duration: 0.5ms | Allocations: 230)
+  Rendered categories/show.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1274)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 3426)
+Completed 200 OK in 9ms (Views: 6.1ms | ActiveRecord: 0.2ms | Allocations: 5974)
+
+
+Started DELETE "/categories/2" for 127.0.0.1 at 2022-01-15 09:30:25 +0530
+Processing by CategoriesController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"2"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:63:in `set_category'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/categories_controller.rb:52:in `destroy'
+  [1m[36mCategory Destroy (0.7ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/categories_controller.rb:52:in `destroy'
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/categories_controller.rb:52:in `destroy'
+Redirected to http://localhost:3000/categories
+Completed 302 Found in 16ms (ActiveRecord: 4.4ms | Allocations: 2338)
+
+
+Started GET "/categories" for 127.0.0.1 at 2022-01-15 09:30:25 +0530
+Processing by CategoriesController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:6
+  Rendered categories/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1071)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 3234)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.1ms | Allocations: 3585)
+
+
+Started GET "/doctor" for 127.0.0.1 at 2022-02-17 23:04:18 +0530
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/doctor"):
+  
+Started GET "/" for 127.0.0.1 at 2022-02-17 23:04:33 +0530
+  
+ActionController::RoutingError (uninitialized constant HomeController):
+  
+Started GET "/" for 127.0.0.1 at 2022-02-17 23:04:36 +0530
+  
+ActionController::RoutingError (uninitialized constant HomeController):
+  
+Started GET "/cart_themes" for 127.0.0.1 at 2022-02-17 23:04:44 +0530
+Processing by CartThemesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cart_themes/index.html.erb within layouts/application
+  [1m[36mCartTheme Load (0.1ms)[0m  [1m[34mSELECT "cart_themes".* FROM "cart_themes"[0m
+  ↳ app/views/cart_themes/index.html.erb:6
+  Rendered cart_themes/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 960)
+  Rendered layout layouts/application.html.erb (Duration: 54.8ms | Allocations: 36886)
+Completed 200 OK in 67ms (Views: 56.7ms | ActiveRecord: 0.1ms | Allocations: 40504)
+
+
+Started GET "/cart_themes/new" for 127.0.0.1 at 2022-02-17 23:04:47 +0530
+Processing by CartThemesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cart_themes/new.html.erb within layouts/application
+  Rendered cart_themes/_form.html.erb (Duration: 12.1ms | Allocations: 3816)
+  Rendered cart_themes/new.html.erb within layouts/application (Duration: 15.0ms | Allocations: 4117)
+  Rendered layout layouts/application.html.erb (Duration: 17.7ms | Allocations: 6275)
+Completed 200 OK in 30ms (Views: 18.4ms | ActiveRecord: 1.8ms | Allocations: 10933)
+
+
+Started GET "/cart_themes" for 127.0.0.1 at 2022-02-17 23:04:50 +0530
+Processing by CartThemesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cart_themes/index.html.erb within layouts/application
+  [1m[36mCartTheme Load (0.4ms)[0m  [1m[34mSELECT "cart_themes".* FROM "cart_themes"[0m
+  ↳ app/views/cart_themes/index.html.erb:6
+  Rendered cart_themes/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 752)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 2903)
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.4ms | Allocations: 3173)
+
+
+Started GET "/cart_themes/new" for 127.0.0.1 at 2022-02-17 23:04:52 +0530
+Processing by CartThemesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cart_themes/new.html.erb within layouts/application
+  Rendered cart_themes/_form.html.erb (Duration: 3.4ms | Allocations: 882)
+  Rendered cart_themes/new.html.erb within layouts/application (Duration: 4.3ms | Allocations: 970)
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 3120)
+Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 0.0ms | Allocations: 3395)
+
+
+Started GET "/cart_themes" for 127.0.0.1 at 2022-02-17 23:04:54 +0530
+Processing by CartThemesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cart_themes/index.html.erb within layouts/application
+  [1m[36mCartTheme Load (0.4ms)[0m  [1m[34mSELECT "cart_themes".* FROM "cart_themes"[0m
+  ↳ app/views/cart_themes/index.html.erb:6
+  Rendered cart_themes/index.html.erb within layouts/application (Duration: 6.7ms | Allocations: 769)
+  Rendered layout layouts/application.html.erb (Duration: 17.6ms | Allocations: 2920)
+Completed 200 OK in 22ms (Views: 19.5ms | ActiveRecord: 0.4ms | Allocations: 3198)
+
+
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+Started GET "/" for 127.0.0.1 at 2022-03-13 16:31:07 +0530
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant HomeController):
+  
+Started GET "/cart_themes" for 127.0.0.1 at 2022-03-13 16:31:16 +0530
+Processing by CartThemesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cart_themes/index.html.erb within layouts/application
+  [1m[36mCartTheme Load (0.2ms)[0m  [1m[34mSELECT "cart_themes".* FROM "cart_themes"[0m
+  ↳ app/views/cart_themes/index.html.erb:6
+  Rendered cart_themes/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 981)
+  Rendered layout layouts/application.html.erb (Duration: 70.2ms | Allocations: 36866)
+Completed 200 OK in 83ms (Views: 71.7ms | ActiveRecord: 0.2ms | Allocations: 40466)
+
+
+Started GET "/cart_themes/new" for 127.0.0.1 at 2022-03-13 16:31:18 +0530
+Processing by CartThemesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cart_themes/new.html.erb within layouts/application
+  Rendered cart_themes/_form.html.erb (Duration: 10.7ms | Allocations: 3719)
+  Rendered cart_themes/new.html.erb within layouts/application (Duration: 11.7ms | Allocations: 4020)
+  Rendered layout layouts/application.html.erb (Duration: 15.0ms | Allocations: 6180)
+Completed 200 OK in 31ms (Views: 15.6ms | ActiveRecord: 1.3ms | Allocations: 10852)
+
+

@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Cart themes</h1>
+
+<div id="cart_themes">
+  <% @cart_themes.each do |cart_theme| %>
+    <%= render cart_theme %>
+    <p>
+      <%= link_to "Show this cart theme", cart_theme %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New cart theme", new_cart_theme_path %>

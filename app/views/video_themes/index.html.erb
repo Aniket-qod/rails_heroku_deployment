@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Video themes</h1>
+
+<div id="video_themes">
+  <% @video_themes.each do |video_theme| %>
+    <%= render video_theme %>
+    <p>
+      <%= link_to "Show this video theme", video_theme %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New video theme", new_video_theme_path %>

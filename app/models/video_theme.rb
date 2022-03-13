@@ -1,0 +1,2 @@
+class VideoTheme < ApplicationRecord
+end

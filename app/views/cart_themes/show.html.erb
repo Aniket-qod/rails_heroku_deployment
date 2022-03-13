@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @cart_theme %>
+
+<div>
+  <%= link_to "Edit this cart theme", edit_cart_theme_path(@cart_theme) %> |
+  <%= link_to "Back to cart themes", cart_themes_path %>
+
+  <%= button_to "Destroy this cart theme", @cart_theme, method: :delete %>
+</div>

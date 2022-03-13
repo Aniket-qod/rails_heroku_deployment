@@ -1,0 +1,2 @@
+class CartTheme < ApplicationRecord
+end

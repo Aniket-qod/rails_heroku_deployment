@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @video_theme %>
+
+<div>
+  <%= link_to "Edit this video theme", edit_video_theme_path(@video_theme) %> |
+  <%= link_to "Back to video themes", video_themes_path %>
+
+  <%= button_to "Destroy this video theme", @video_theme, method: :delete %>
+</div>

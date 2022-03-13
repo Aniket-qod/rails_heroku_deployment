@@ -1,0 +1,27 @@
+<%= form_with(model: cart_theme) do |form| %>
+  <% if cart_theme.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(cart_theme.errors.count, "error") %> prohibited this cart_theme from being saved:</h2>
+
+      <ul>
+        <% cart_theme.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :theme, style: "display: block" %>
+    <%= form.text_field :theme %>
+  </div>
+
+  <div>
+    <%= form.label :status, style: "display: block" %>
+    <%= form.text_field :status %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
